@@ -10,10 +10,10 @@ import javax.persistence.Id;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private Integer age;
-    private String address;
+    public Long id;
+    public String name;
+    public Integer age;
+    public String address;
 
     public Long getId() {
          return id;

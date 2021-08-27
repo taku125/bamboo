@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import my.project.bamboo.entity.Account;
 import my.project.bamboo.repository.AccountRepository;
@@ -13,6 +14,8 @@ import my.project.bamboo.repository.AccountRepository;
 public class AccountService{
     @Autowired
     private AccountRepository accountRepository;
+    protected final static Logger logger = LoggerFactory.getLogger(AccountService.class);
+
 
     public List<Account> findAll(){
         return accountRepository.findAll();
